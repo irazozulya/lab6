@@ -1,0 +1,19 @@
+h1 {
+	font-family:'Comic Sans MS', cursive;
+	font-size: 30px;
+}
+#imm { 
+	margin-left: 35%;
+	margin-right: 35%;
+	border: 5px solid #cc99ff;
+	padding: 10px;
+	border-radius: 10px;
+}
+a {
+	color:#cc6666;
+	text-decoration: none;
+}
+a:hover {
+	color:#99ccff;
+	text-decoration: none;
+}

@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> Головна </title>
+<link rel="stylesheet" href="/public/style/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body style="background-color:#ffffcc">
+<br / >
+<h1 align="center" style="color:#ff9999"> Головна </p>
+<p align="center">
+    <ol style="margin-left: 30%; margin-right: 30%;">
+        <% array.page.forEach(function (item) {%>
+            <li>
+                <a href="<%= '/page/' + array.page.indexOf(item)%>"><%= item.title %></a>
+            </li>
+        <%});%>
+    </ol>
+</p>
+<hr align="center"  width="50%" size="3" color="cc99cc"/ >
+</body>
+</html>
