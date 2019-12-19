@@ -1,4 +1,3 @@
-const http = require('http')
 const fs = require('fs')
 const express = require('express')
 const bodyParser = require('body-parser');
@@ -11,8 +10,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
-const hostname = '127.0.0.1'
-const port = 3000;
+const port = process.env.PORT || 80;
 
 let json = fs.readFileSync('page.json', 'utf8');
 let page = JSON.parse(json);
@@ -39,8 +37,8 @@ app.post('/newpost', urlencodedParser, function(req, res){
     addpage(newpage);
     res.render(__dirname + "/views/newpost.ejs");
 })
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`)
+app.listen(port, () => {
+  console.log(`Server is running`)
 })
 
 function addpage(newpage) {
