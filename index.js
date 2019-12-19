@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
 const hostname = '127.0.0.1'
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 let json = fs.readFileSync('page.json', 'utf8');
 let page = JSON.parse(json);
